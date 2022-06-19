@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+* {
+  font-family: 'Nunito', sans-serif;
+  outline:none;
+  margin: 0;
+  padding: 0;
+  transition: all .2s linear;
+}
+
+html{
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+  background: #1b0a26;
+}
+
+a {
+  color:#fff;
+  transition:0.3s;
+  text-decoration:none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing:2px;
+}
+
+ nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #1b0a26;
+  height:8vh;
+}
+
+ nav img{
+   transition:0.3s;
+   cursor: pointer;
+ }
+
+nav button{
+  background: transparent;
+  border:none;
+
+}
+
+ nav img:hover{
+   opacity: 0.7;
+ }
+
+.menu{
+  list-style: none;
+  display: flex;
+}
+
+.menu li{
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.burger{
+  cursor: pointer;
+  display: none;
+}
+
+.burger div{
+  width: 32px;
+  height: 1px;
+  background: #fff;
+  margin:5px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px){
+  body{
+    overflow-x: hidden;
+  }
+  .menu {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 100vw;
+    height: 92vh;
+    background:  #1b0a26;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .menu li{
+    text-align:center;
+    margin-left: 0;
+  }
+
+  .burger{
+    display:block;
+  }
+}
+
+.menu.ativa{
+  transform: translateX(0);
+}
+
+main h1{
+  color:#fff;
+  transition:0.3s;
+}
+main h3{
+  color:#fff;
+  transition:0.3s;
+}
+
+#login-form{
+    display: none;
+}
+
+.form-box{
+  width:380px;
+	height:480px;
+	position:relative;
+	margin:2% auto;
+	background: rgba(0, 0, 0,.8);;
+	padding:10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.button-box{
+	width:220px;
+	margin:35px auto;
+	position:relative;
+	box-shadow: 0 0 20px 5px #6A5ACD;
+	border-radius: 30px;
+}
+
+.toggle-btn{
+	padding:20px 15px;
+	cursor:pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position: relative;
+  font-family: 'Orbitron', sans-serif;
+  color:#fff;
+}
+
+#btn{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 120px;
+	height: 100%;
+	background: linear-gradient(to right, #836FFF, #6A5ACD, #483D8B);
+	border-radius: 30px;
+	transition: 0.5s;
+}
+
+
+.input-group-login{
+	top: 150px;
+	position:absolute;
+	width:280px;
+	transition:0.5s;
+}
+
+.input-group-register{
+  top: 120px;
+	position:absolute;
+	width:280px;
+	transition:0.5s;
+}
+
+.input-field{
+	width: 100%;
+	padding:10px 0;
+	margin:5px 0;
+	border-left:0;
+	border-top:0;
+	border-right:0;
+	border-bottom: 1px solid #fff;
+	outline:none;
+	background: transparent;
+ 
+}
+
+.submit-btn{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, #836FFF, #6A5ACD, #483D8B);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+  font-family: 'Orbitron', sans-serif;
+  color:#fff;
+  
+}
+.submit-btn:hover {opacity: 0.6}
+
+.check-box{
+	margin: 30px 10px 34px 0;
+}
+
+span{
+	color:#fff;
+	font-size:15px;
+	bottom:68px;
+	position:absolute;
+}
+
+#login{
+	left:50px;
+}
+
+#login input{
+	color:white;
+	font-size:15;
+}
+
+#register{
+	left:450px;
+}
+
+#register input{
+	color:white;
+	font-size: 15;
+}
+
+section{
+  padding:32px 9%;
+  
+}
+section.tudo{
+  min-height: 800px;
+  background:#1b0a26;
+}
+
+#tudo{
+  display:flex;
+  flex-wrap: flex;
+  gap: 40px;
+  min-height: 100vh;
+  align-items: center;
+
+}
+
+.tudo .image img{
+  width:100%;
+  max-width: 400px;
+  animation:float 3s linear infinite;
+  border-radius: 100%;
+}
+
+@keyframes float{
+  0%, 100%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(48px);
+  }
+}
+
+.tudo .sobre h1{
+  font-size:80px;
+  color:white;
+}
+.tudo .sobre p{
+  font-size:27px;
+  color:white;
+}
+
+section.explore{
+  background: linear-gradient(#483D8B, #6A5ACD, #836FFF);
+
+border-radius: 15px 15px 0px 0px;
+}
+
+.explore .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+ 
+}
+
+.explore .box-container .box{
+  flex:1 1 30rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: .5rem;
+  box-shadow: 0 4px 8px 0 #1b0a26;
+}
+
+
+.explore .box-container .box .content{
+  text-align: center;
+  background:#fff;
+  padding:2rem;
+}
+
+.explore .box-container .box .content img{
+  margin:1.5rem 0;
+}
+
+.title{
+  text-align: center;
+  font-size: 56px;
+  padding: 16px;
+  color:#fff;
+}
+
+.explore .box-container .box .content h3{
+  font-size: 2.5rem;
+  color:#333;
+}
+
+.explore .box-container .box .content p{
+  font-size: 1.6rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.creat {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 550px) {
+  .creat {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: white;
+}
+
+.footer{
+  background:#1b0a26;
+  text-align: center;
+}
+
+.footer .share{
+  display: flex;
+  gap:1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer .credit{
+  padding:2.5rem 1rem;
+  color:#fff;
+  font-weight: normal;
+  font-size: 2rem;
+}
+/*Estes são webkits para modificar a barra de rolagem*/
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #1b0a26;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(207, 127, 22);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(14, 13, 11);  /* creates padding around scroll thumb */
+}
+
+/*Parte do login*/
+
